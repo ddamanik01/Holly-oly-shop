@@ -1,0 +1,327 @@
+*{
+ padding: 0;
+ margin:0;
+ text-decoration:0;
+ list-style:0;
+ box-sizing: border-box; 
+}
+
+body{
+    background-color: white;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+
+}
+
+/* Header */
+header{
+    grid-area: header;
+    position: sticky;
+    border-bottom:black solid 1px ;
+    top: 0;
+    left: 0;
+    right: 0;
+background-color: aliceblue;
+
+}
+nav {
+    display :flex;
+    justify-content: space-between;
+
+}
+nav h1 {
+    color: blue;
+}
+nav ul {
+    display: flex;
+
+}
+nav li {
+    list-style: none;
+}
+nav a{
+    color: green;
+    margin: 0.5em;
+}
+
+/*hamburger*/
+nav img{
+    height: 20px;
+}
+
+nav label{
+    display: none;
+}
+#beranda {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5em 5vw;
+}
+
+/*left beranda*/
+.left-beranda {
+    margin:auto 0;
+}
+.left-beranda p {
+    color:blue;
+}
+
+.left-beranda h1{
+    font-size: size 2.5rem;
+}
+.left-beranda h2{
+    font-size: large;
+    font-weight: lighter;
+}
+.left-beranda a{
+    display: inline-block;
+    color: white;
+    background-color: aqua;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin: 1.5em 0;
+    border-radius: 50px;
+
+}
+/*Tentang-Saya*/
+
+#tentang-saya {
+    text-align: center;
+    padding: 5em 5em;
+    background-color : black;
+}
+
+#tentang-saya h2 {
+    margin-bottom: 1em;
+    color : blue;
+    
+}
+
+#tentang-saya {
+    color:white;
+}
+
+@media (max-width: 768px) {
+    nav ul{
+        position: fixed;
+        top : 70px;
+        left :100%;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: aqua;
+        transition: 0.5s;
+    }
+nav li  {
+    line-height: 80px;
+    margin: 0  ;
+}
+nav a{color: black};
+/*responsive hamburger */
+nav label
+{display: block;}
+#check:checked ~ ul{
+    left: 0 limportant;
+
+}
+/*beranda*/
+#beranda {
+    flex-direction: column-reverse;
+
+}
+}
+
+/*Portofolio*/
+#portofolio {
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-areas: "top" "bottom";
+    margin: 2em 0;
+    scroll-margin-top: 17vh;
+}
+/*Top Portofolio*/
+.top-portofolio{
+    grid-area: top;
+text-align: center;
+}
+.top-portofolio h2{
+    color: aqua;
+    font-size: medium;
+}
+
+.top-portofolio h3{
+    font-size: xx-large;
+    margin: 0.2em 0;
+
+
+}
+.top-portofolio p{
+    margin-bottom: 1em;
+}
+/*bottom portofolio*/
+.bottom-portofolio{
+    display: grid;
+    grid-area: bottom;
+    grid-template-columns: 1fr 1fr;
+
+}
+.bottom-portofolio figure{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px lightgrey;
+    margin: 1em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-portofolio img{
+    width: 100%;
+    margin: auto;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;  
+    object-fit: contain;
+    display: inline-block;
+}
+.bottom-portofolio p{
+    background-color: white;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    margin-top: auto;
+    color: white;
+    padding: 0.2em;
+    display: block;
+    text-shadow: white 1px 0 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+/*Kontak*/
+#Kontak {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "top" "bottom";
+    margin: 2em 0;
+    justify-content: center;
+    scroll-margin: 20vh;
+
+}
+.top-kontak{
+    grid-area: top;
+    text-align: center;
+    padding: 0 0 2em 0;
+}
+
+.top-kontak h2{
+    font-size: medium;
+color: aqua;
+
+}
+
+.top-kontak h3{
+    font-size: xx-large;
+    margin: 0.2em 0;
+}
+.bottom-kontak{
+    grid-area: bottom;
+    padding: 1em;
+}
+.bottom-kontak form{
+    display: grid;
+}
+.bottom-kontak input{
+    display: block;
+    width:100%;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    outline-width: 0;
+    background-color: rgb(228, 228, 228);
+
+}
+.bottom-kontak textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    margin-bottom: 0.5em;
+    border-radius: 3px;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    outline: none;
+    background-color: rgb(228, 228, 228);
+}
+
+.bottom-kontak button{
+    background-color: aqua;
+    width: 140px;
+    height: 30px;
+    margin-top: 0.8em;
+    border-radius: 50px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    color: white;
+    justify-self: center;
+    font-size: small;
+}
+
+.bottom-kontak button:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
